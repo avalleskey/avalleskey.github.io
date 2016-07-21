@@ -259,7 +259,7 @@ textarea[type-out="true"] {
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: center;
-  box-shadow: none;
+  box-shadow: 0 10px 40px rgba(16, 67, 251, .2);
 }
 
 .name-at-top {
