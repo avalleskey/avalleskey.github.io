@@ -315,8 +315,6 @@ function simulateTyping(str, textArea) {
       var char = str[currentCharIndex];
       textArea.val(textArea.val() + char);
       currentCharIndex ++;
-      console.log(currentCharIndex);
-      console.log(str.length);
       if (currentCharIndex == str.length) {
       	vars.stage++;
       }
