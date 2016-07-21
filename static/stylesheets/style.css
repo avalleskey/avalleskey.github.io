@@ -244,6 +244,9 @@ textarea[type-out="true"] {
   outline: none;
 }
 .profile-picture {
+  background-color: rgba(234, 210, 252, 1.00);
+  background-image: url('/static/images/profile-picture.png');
+  visibility: hidden;
   width: 300px;
   height: 300px;
   position: absolute;
@@ -260,6 +263,7 @@ textarea[type-out="true"] {
   -o-transition: 0.3s -o-box-shadow ease;
 }
 .profile-picture[drawn="3"] {
+  visibility: visible;
   background-image: url('/static/images/profile-picture.png');
   background-repeat: no-repeat;
   background-size: 300px;
