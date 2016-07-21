@@ -253,13 +253,18 @@ textarea[type-out="true"] {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  box-shadow: none;
+  transition: 0.3s box-shadow ease;
+  -webkit-transition: 0.3s -webkit-box-shadow ease;
+  -moz-transition: 0.3s -moz-box-shadow ease;
+  -o-transition: 0.3s -o-box-shadow ease;
 }
 .profile-picture[drawn="3"] {
   background-image: url('/static/images/profile-picture.png');
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: center;
-  box-shadow: 0 10px 40px rgba(16, 67, 251, .2);
+  box-shadow: 0 10px 40px rgba(16, 67, 251, .1);
 }
 
 .name-at-top {
