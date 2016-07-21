@@ -1,0 +1,305 @@
+body {
+  background: #FFF;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.outline-box {
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
+  position: absolute;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  position: relative;
+}
+.section h1 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  display: block;
+}
+.content {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: visible !important;
+}
+.artboard {
+  box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: visible;
+  left: 0;
+  top: 0;
+}
+.artboardReady {
+  background: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+.artboard-title {
+  font-size: 11px;
+  font-weight: 400;
+  color: #9e9e9e;
+  margin: -17px 0 0 4px;
+  display: none;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+}
+.artboardReady .artboard-title {
+  display: block;
+}
+.artboard-dimensions {
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0 5px;
+  background: rgba(0,0,0,.3);
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 14px);
+  width: auto;
+  transform: translateX(calc(100% + 6px));
+  -webkit-transform: translateX(calc(100% + 6px));
+  -moz-transform: translateX(calc(100% + 6px));
+  -o-transform: translateX(calc(100% + 6px));
+  display: none;
+}
+.artboardResizing .artboard-dimensions {
+  display: block;
+}
+
+/* cursors */
+.cursor {
+  position: absolute;
+  z-index: 9999;
+
+  width: 23px;
+  height: 23px;
+}
+.drawCursor {
+  background: url('crossHair.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 100%;
+  left: 100%;
+  margin: -11px 0 0 -11px;
+}
+.defaultCursor {
+  background: url('defaultCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 100%;
+  left: 100%;
+  margin: -11px 0 0 -11px;
+}
+.textCursor {
+  background: url('textCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 100%;
+  left: 100%;
+  margin: -11px 0 0 -11px;
+}
+/* -- resize cursors */
+.resizeHorizontalCursor {
+  background: url('horizontalCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.resizeVerticalCursor {
+  background: url('verticalCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.resizeLeftTopCursor, .resizeRightBottomCursor {
+  background: url('primaryDiagonalCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.resizeRightTopCursor, .resizeLeftBottomCursor {
+  background: url('secondaryDiagonalCursor.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* resizeLeftTopCursor, resizeRightBottomCursor; resizeRightTopCursor, resizeLeftBottomCursor; */
+
+/* handlers */
+.artboardWithHandlers .handlers {
+  display: block;
+}
+.handlers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.handlers div {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-image: linear-gradient(-180deg, #FBFBFB 0%, #DBDBDB 100%);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.30), inset 0px 0.5px 0px 0px #FCFCFC, 0 0 0 0.5px rgba(0,0,0,.25);
+}
+.handlers div:nth-of-type(1) { /* top left */
+    left: -3px;
+    top: -3px;
+}
+.handlers div:nth-of-type(2) { /* top middle */
+    left: calc(50% - 3px);
+    top: -3px;
+}
+.handlers div:nth-of-type(3) { /* top right */
+    right: -3px;
+    top: -3px;
+}
+.handlers div:nth-of-type(4) { /* middle left */
+    left: -3px;
+    top: calc(50% - 3px);;
+}
+.handlers div:nth-of-type(5) { /* middle right */
+    right: -3px;
+    top: calc(50% - 3px);;
+}
+.handlers div:nth-of-type(6) { /* bottom left */
+    left: -3px;
+    bottom: -3px;
+}
+.handlers div:nth-of-type(7) { /* bottom middle */
+    left: calc(50% - 3px);
+    bottom: -3px;
+}
+.handlers div:nth-of-type(8) { /* bottom right */
+    right: -3px;
+    bottom: -3px;
+}
+
+/* Actual content */
+*[drawn="0"] {
+  /* not drawn */
+  visibility: hidden;
+}
+div[drawn="1"] {
+  /* drawn but still default style */
+  visibility: visible;
+  background-color: #D8D8D8;
+  box-shadow: inset 0 0 0 1px #979797;
+}
+div[drawn="2"] {
+  /* drawn but still default style */
+  visibility: visible;
+  background-color: #D8D8D8;
+  box-shadow: none;
+}
+*[drawn="3"] {
+  /* drawn but still default style */
+  visibility: visible;
+}
+*[handlers="false"] .handlers {
+  display: none;
+}
+*[handlers="true"] .handlers {
+  display: block;
+}
+textarea[type-out="true"] {
+  padding: 0;
+  margin: 0;
+  resize: none;
+  display: inline-block;
+  width: calc(100% - 80px);
+  border: none;
+  apperance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  background:transparent;
+  outline: none;
+}
+.profile-picture {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.profile-picture[drawn="3"] {
+  background-image: url('static/images/profile-picture.png');
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
+  box-shadow: none;
+}
+
+.name-at-top {
+  color: #111;
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.short-description-container {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.short-description-container textarea {
+  font-size: 42px;
+  font-weight: bold;
+  color: #111;
+  display: block;
+  line-height: 56px;
+  height: 56px;
+}
+.scroll-down-for-more {
+  color: #B4B4B4;
+  position: absolute;
+  left: 40px;
+  bottom: 36px;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me {
+  background: rgba(0, 205, 255, 0.5);
+}

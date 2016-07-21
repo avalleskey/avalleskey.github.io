@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Horizontal Cursor Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <polygon id="path-2" points="3 3 3 3.96976337e-09 -1.51082242e-12 3.5 3 7 3 4 7 4 7 5 8 5 8 4 12 4 12 7 15 3.5 12 -1.82636945e-12 12 3 8 3 8 2 7 2 7 3 3 3 3 3"></polygon>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="17" height="9">
+            <rect x="-1" y="-1" width="17" height="9" fill="white"></rect>
+            <use xlink:href="#path-2" fill="black"></use>
+        </mask>
+        <rect id="path-4" x="7" y="2" width="1" height="3"></rect>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="3" height="5">
+            <rect x="6" y="1" width="3" height="5" fill="white"></rect>
+            <use xlink:href="#path-4" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-222.000000, -269.000000)">
+            <g id="Horizontal-Cursor-Copy" filter="url(#filter-1)" transform="translate(231.500000, 277.500000) rotate(-225.000000) translate(-231.500000, -277.500000) translate(224.000000, 274.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-3)" stroke-width="2" xlink:href="#path-2"></use>
+                </g>
+                <g id="Combined-Shape-Copy">
+                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-5)" stroke-width="2" xlink:href="#path-4"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
