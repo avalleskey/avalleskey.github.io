@@ -1,7 +1,7 @@
 var isDrawing = false;
 var windowSizeChanged = false;
 var vars = {stage: 0};
-var shouldAnimate = false;
+var shouldAnimate = true;
 
 $(document).ready(function() {
     if (!shouldAnimate) {
