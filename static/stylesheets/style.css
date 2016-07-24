@@ -276,14 +276,14 @@ textarea[type-out="true"] {
   position: absolute;
   left: 80px;
   top: 60px;
-  font-size: 34px;
+  font-size: 52px;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
 .short-description-container {
   position: absolute;
-  left: 8px;
+  left: 80px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
