@@ -250,7 +250,7 @@ textarea[type-out="true"] {
   width: 300px;
   height: 300px;
   position: absolute;
-  right: 40px;
+  right: 80px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -274,8 +274,8 @@ textarea[type-out="true"] {
 .name-at-top {
   color: #111;
   position: absolute;
-  left: 40px;
-  top: 30px;
+  left: 80px;
+  top: 60px;
   font-size: 34px;
   font-weight: bold;
   margin: 0;
@@ -283,7 +283,7 @@ textarea[type-out="true"] {
 }
 .short-description-container {
   position: absolute;
-  left: 40px;
+  left: 8px;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -301,8 +301,8 @@ textarea[type-out="true"] {
 .scroll-down-for-more {
   color: #B4B4B4;
   position: absolute;
-  left: 40px;
-  bottom: 36px;
+  left: 80px;
+  bottom: 60px;
   font-size: 24px;
   font-weight: bold;
   margin: 0;
