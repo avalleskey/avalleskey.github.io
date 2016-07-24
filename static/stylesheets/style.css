@@ -291,12 +291,12 @@ textarea[type-out="true"] {
   -o-transform: translateY(-50%);
 }
 .short-description-container textarea {
-  font-size: 42px;
+  font-size: 56px;
   font-weight: bold;
   color: #111;
   display: block;
-  line-height: 56px;
-  height: 56px;
+  line-height: 64px;
+  height: 64px;
 }
 .scroll-down-for-more {
   color: #B4B4B4;
