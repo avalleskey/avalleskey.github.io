@@ -3,6 +3,7 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 .outline-box {
@@ -18,9 +19,9 @@ body {
 }
 .section h1 {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  font-size: 100px;
+  top: 60px;
+  left: 80px;
+  font-size: 80px;
   font-weight: bold;
   color: white;
   margin: 0;
@@ -103,7 +104,7 @@ body {
   height: 23px;
 }
 .drawCursor {
-  background: url('/crossHair.svg');
+  background: url('../images/crossHair.svg');
   background-repeat: no-repeat;
   background-position: center;
   top: 100%;
@@ -111,7 +112,7 @@ body {
   margin: -11px 0 0 -11px;
 }
 .defaultCursor {
-  background: url('/defaultCursor.svg');
+  background: url('../images/defaultCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
   top: 100%;
@@ -119,7 +120,7 @@ body {
   margin: -11px 0 0 -11px;
 }
 .textCursor {
-  background: url('/textCursor.svg');
+  background: url('../images/textCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
   top: 100%;
@@ -128,22 +129,22 @@ body {
 }
 /* -- resize cursors */
 .resizeHorizontalCursor {
-  background: url('/horizontalCursor.svg');
+  background: url('../images/horizontalCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .resizeVerticalCursor {
-  background: url('/verticalCursor.svg');
+  background: url('../images/verticalCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .resizeLeftTopCursor, .resizeRightBottomCursor {
-  background: url('/primaryDiagonalCursor.svg');
+  background: url('../images/primaryDiagonalCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .resizeRightTopCursor, .resizeLeftBottomCursor {
-  background: url('/secondaryDiagonalCursor.svg');
+  background: url('../images/secondaryDiagonalCursor.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -245,7 +246,7 @@ textarea[type-out="true"] {
 }
 .profile-picture {
   background-color: rgba(234, 210, 252, 1.00);
-  background-image: url('/static/images/profile-picture.png');
+  background-image: url('../images/profile-picture.png');
   visibility: hidden;
   width: 300px;
   height: 300px;
@@ -264,7 +265,7 @@ textarea[type-out="true"] {
 }
 .profile-picture[drawn="3"] {
   visibility: visible;
-  background-image: url('/static/images/profile-picture.png');
+  background-image: url('../images/profile-picture.png');
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: center;
@@ -295,8 +296,8 @@ textarea[type-out="true"] {
   font-weight: bold;
   color: #111;
   display: block;
-  line-height: 64px;
-  height: 64px;
+  line-height: 72px;
+  height: 72px;
 }
 .scroll-down-for-more {
   color: #B4B4B4;
