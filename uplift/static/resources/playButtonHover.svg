@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>playButtonHover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" transform="translate(-449.000000, -389.000000)" fill="#FFFFFF">
+            <path d="M500,491 C528.166522,491 551,468.166522 551,440 C551,411.833478 528.166522,389 500,389 C471.833478,389 449,411.833478 449,440 C449,468.166522 471.833478,491 500,491 Z M487,426.197233 C487,422.222311 489.724889,420.723092 493.078519,422.843769 L514.921481,436.656231 C518.278555,438.779086 518.275111,442.223092 514.921481,444.343769 L493.078519,458.156231 C489.721445,460.279086 487,458.768011 487,454.802767 L487,426.197233 Z" id="playButtonHover"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>sendButton</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" transform="translate(-758.000000, -882.000000)" fill="#FF4771">
+            <g id="Group-6" transform="translate(200.000000, 659.000000)">
+                <g id="Group-5" transform="translate(340.000000, 0.000000)">
+                    <g id="Tool-Bar" transform="translate(0.000000, 210.000000)">
+                        <path d="M218,26 C218,18.82 223.82,13 231,13 C238.18,13 244,18.82 244,26 C244,33.18 238.18,39 231,39 C223.82,39 218,33.18 218,26 Z M236.2738,23.9664 L231.7078,19.4004 C231.5198,19.2124 231.2658,19.1074 231.0008,19.1074 C230.7348,19.1074 230.4808,19.2124 230.2938,19.4004 L225.7268,23.9664 C225.3358,24.3574 225.3358,24.9904 225.7268,25.3804 C225.9218,25.5754 226.1778,25.6734 226.4338,25.6734 C226.6898,25.6734 226.9458,25.5754 227.1408,25.3804 L229.9948,22.5274 L229.9948,32.0044 C229.9948,32.5574 230.4418,33.0044 230.9948,33.0044 C231.5468,33.0044 231.9948,32.5574 231.9948,32.0044 L231.9948,22.5154 L234.8598,25.3804 C235.2508,25.7714 235.8828,25.7714 236.2738,25.3804 C236.6648,24.9894 236.6648,24.3574 236.2738,23.9664 Z" id="sendButton"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
