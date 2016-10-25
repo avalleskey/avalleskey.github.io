@@ -608,9 +608,6 @@ section .infoBlock p {
 /* Responsive design */
 @media only screen and (max-width: 660px) {
     /* Includes 30px of padding on left and right */
-    body {
-        background-color: lightblue;
-    }
     .container {
       width: calc(100% - 40px);
     }
