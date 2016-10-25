@@ -4,6 +4,9 @@ body {
   font-family: 'BlinkMacSystemFont', "San Francisco", "Helvetica Neue";
   background: #FAFAFA;
 }
+video::-webkit-media-controls {
+  display: none;
+}
 .container {
   width: 600px;
   margin: 0 auto;
@@ -112,15 +115,19 @@ header ul li a {
 .promoVideoContainer:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.05);
 }
-.promoVideo {
+#promoVideo {
   width: 100%;
   height: 100%;
   background: #444 url("../resources/placeholderImage.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  object-fit: cover;
+  -webkit-object-fit: cover;
+  -moz-object-fit: cover;
+  -o-object-fit: cover;
 }
-.promoVideoContainer.isPaused::after {
+.promoVideoContainer::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -136,8 +143,13 @@ header ul li a {
   -webkit-transition: 0.15s all ease;
   -moz-transition: 0.15s all ease;
   -o-transition: 0.15s all ease;
+  opacity: 0;
+  border-radius: 6px;
 }
-.promoVideoContainer.isPaused:hover::after {
+.promoVideoContainer.isPaused::after {
+  opacity: 1;
+}
+.promoVideoContainer:hover::after {
   background: rgba(255, 71, 113, .5) url("../resources/playButtonHover.svg");
   background-size: 102px;
   background-repeat: no-repeat;
@@ -204,33 +216,77 @@ section .infoBlock p {
 }
 
 /* Send example block */
-#send .timmyBlock {
+.messageSent .timmyBlock {
+  opacity: 0;
+  transform: scale(0.8) translateY(-20%);
+  -webkit-transform: scale(0.8) translateY(-20%);
+  -moz-transform: scale(0.8) translateY(-20%);
+  -o-transform: scale(0.8) translateY(-20%);
+}
+.timmyBlock {
+  transition: 0.2s all ease;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+}
+.hugoBlock {
+  opacity: 0;
+  transform: scale(0.8) translateY(20%);
+  -webkit-transform: scale(0.8) translateY(20%);
+  -moz-transform: scale(0.8) translateY(20%);
+  -o-transform: scale(0.8) translateY(20%);
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+}
+.messageSent .hugoBlock {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  -webkit-transform: scale(1) translateY(0);
+  -moz-transform: scale(1) translateY(0);
+  -o-transform: scale(1) translateY(0);
+}
+#send .recipientBlock {
   width: 100%;
   padding: 36px 0;
+  position: absolute;
 }
-#send .timmyBlock .timsFace {
+#send .recipientBlock .timsFace, #send .recipientBlock .hugosFace {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   overflow: hidden;
+  display: block;
+  margin: 0 auto 14px;
+}
+#send .recipientBlock .timsFace {
   background: url("../resources/timsFace.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: block;
-  margin: 0 auto 14px;
 }
-#send .timmyBlock h2, #send .timmyBlock p {
+#send .recipientBlock .hugosFace {
+  background: url("../resources/hugosFace.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#send .recipientBlock h2, #send .recipientBlock p {
   text-align: center;
 }
-#send .timmyBlock h2 {
+#send .recipientBlock h2 {
   font-weight: 400;
   color: #424242;
   font-size: 20px;
   margin: 0 0 4px;
   padding: 0;
 }
-#send .timmyBlock p {
+#send .recipientBlock p {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -397,6 +453,14 @@ section .infoBlock p {
   margin: 0 auto;
   box-shadow: 0 4px 12px rgba(255, 71, 114, .2);
   cursor: pointer;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+#lastBlock .downloadNowButton:hover {
+  box-shadow: 0 8px 8px rgba(255, 71, 114, .2);
+  opacity: 0.9;
 }
 #lastBlock footer {
   height: 22px;
@@ -415,9 +479,13 @@ section .infoBlock p {
 }
 #lastBlock footer ul li a {
   color: #777;
+  cursor: pointer;
 }
 #lastBlock footer ul li:first-of-type {
   margin-left: 0;
+}
+#lastBlock footer ul li a:hover {
+  color: #FF4771;
 }
 
 

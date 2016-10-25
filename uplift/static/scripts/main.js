@@ -5,7 +5,7 @@ function type(string,element){
         return;
       }
       element.innerHTML = string.substring(0,i);
-      setTimeout(function(){writer(i);},150);
+      setTimeout(function(){writer(i);},120);
     })(0)
 }
 $(document).ready( function() {
@@ -17,6 +17,9 @@ $(document).ready( function() {
       // push send button down and remove text
       $(".sendButton").css("opacity", "0.25");
       setTimeout( function() {
+        // load next recipient
+        $(".sendExample").addClass("messageSent");
+
         // remove text
         $(".userInput").text("");
         $(".userInputPlaceholder").show();
@@ -24,7 +27,19 @@ $(document).ready( function() {
         $(".sendButton").css("opacity", "1");
         $(".receiveExampleNotification").addClass("notificationReceived");
       }, 200);
-    }, 3850);
+    }, 3200);
   }, 800);
+});
 
+$(".promoVideoContainer").click( function() {
+  if ($(this).hasClass("isPaused")) {
+    // play it
+    $(this).removeClass("isPaused");
+    $("#promoVideo")[0].play();
+  }
+  else {
+    // pause it
+    $(this).addClass("isPaused");
+    $("#promoVideo")[0].pause();
+  }
 });
