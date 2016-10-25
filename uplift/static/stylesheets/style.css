@@ -118,6 +118,10 @@ header ul li a {
   -webkit-transition: 0.3s all ease;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
 }
 .promoVideoContainer:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.05);
@@ -125,7 +129,7 @@ header ul li a {
 #promoVideo {
   width: 100%;
   height: 100%;
-  background: #444 url("../resources/placeholderImage.png");
+  background: #444;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -599,4 +603,90 @@ section .infoBlock p {
 .pressKitDetails a {
   color: #FF4771;
   text-decoration: none;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 660px) {
+    /* Includes 30px of padding on left and right */
+    body {
+        background-color: lightblue;
+    }
+    .container {
+      width: calc(100% - 40px);
+    }
+    .promoVideoContainer {
+      height: calc((100vw - 40px) * (9 / 16));
+    }
+    .splash h3 {
+      font-size: 15px;
+    }
+    .featureSection {
+      height: auto;
+    }
+    section .infoBlock h4, section .infoBlock p {
+      text-align: center;
+    }
+    section .infoBlock p {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    section .infoBlock {
+      position: relative;
+      width: 100%;
+      display: block;
+      top: auto;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -o-transform: none;
+      margin: 0 0 20px;
+    }
+    .exampleBlock {
+      width: 100%;
+      position: relative;
+      top: auto;
+      left: 0;
+    }
+    .alignLeft {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .alignRight {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+    #lastBlock footer, header {
+      height: auto;
+    }
+    #lastBlock footer .alignLeft, header .alignLeft {
+      margin-bottom: 15px;
+    }
+    #lastBlock footer .alignRight li {
+      font-size: 22px;
+      display: block;
+      text-align: center;
+      margin: 0 0 15px;
+    }
+    #lastBlock .downloadNowButton {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 30px;
+      font-size: 22px;
+    }
+    header {
+      padding-top: 50px;
+    }
+    header .alignRight {
+      top: auto;
+    }
+    header ul li {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    header .alignLeft li:first-of-type span {
+      display: none;
+    }
 }
