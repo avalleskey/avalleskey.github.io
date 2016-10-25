@@ -198,10 +198,10 @@ section .infoBlock {
   display: block;
   position: absolute;
   top: 50%;
-  transform: translateY(calc(-50% - 6px));
-  -webkit-transform: translateY(calc(-50% - 6px));
-  -moz-transform: translateY(calc(-50% - 6px));
-  -o-transform: translateY(calc(-50% - 6px));
+  transform: translateY(calc(-50% - 28px));
+  -webkit-transform: translateY(calc(-50% - 28px));
+  -moz-transform: translateY(calc(-50% - 28px));
+  -o-transform: translateY(calc(-50% - 28px));
 }
 #send .infoBlock {
   left: 0;
