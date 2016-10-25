@@ -198,16 +198,20 @@ section .infoBlock {
   display: block;
   position: absolute;
   top: 50%;
+}
+#send .infoBlock {
+  left: 0;
+  transform: translateY(calc(-50% - 3px));
+  -webkit-transform: translateY(calc(-50% - 3px));
+  -moz-transform: translateY(calc(-50% - 3px));
+  -o-transform: translateY(calc(-50% - 3px));
+}
+#receive .infoBlock {
+  right: 0;
   transform: translateY(calc(-50% - 28px));
   -webkit-transform: translateY(calc(-50% - 28px));
   -moz-transform: translateY(calc(-50% - 28px));
   -o-transform: translateY(calc(-50% - 28px));
-}
-#send .infoBlock {
-  left: 0;
-}
-#receive .infoBlock {
-  right: 0;
 }
 section .infoBlock h4 {
   font-size: 36px;
