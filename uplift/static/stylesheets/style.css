@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'BlinkMacSystemFont', "San Francisco", "Helvetica Neue";
-  background: #FAFAFA;
+  background: #FFF;
 }
 video::-webkit-media-controls {
   display: none;
@@ -11,6 +11,9 @@ video::-webkit-media-controls {
   width: 600px;
   margin: 0 auto;
   position: relative;
+}
+.colorContain {
+  background: #FAFAFA;
 }
 ul {
   margin: 0;
@@ -31,7 +34,7 @@ ul {
 
 /* Header */
 header {
-  margin-top: 80px;
+  padding-top: 80px;
   height: 24px;
   display: block;
   width: 100%;
@@ -40,6 +43,9 @@ header {
 header ul {
   display:inline-block;
   height: 24px;
+}
+header .alignRight {
+  top: 80px;
 }
 header ul li {
   list-style-type: none;
@@ -76,6 +82,7 @@ header ul li a {
   padding: 50px 0 30px;
   display: block;
   width: 100%;
+  text-align: center;
 }
 .splash h1 {
   font-weight: 300;
@@ -163,7 +170,8 @@ header ul li a {
   position: relative;
 }
 #receive {
-  margin-bottom: 50px;
+  margin-bottom: 0;
+  padding-bottom: 50px;
 }
 .exampleBlock {
   width: 280px;
@@ -546,4 +554,49 @@ section .infoBlock p {
     100% {
         opacity: 0.0;
     }
+}
+
+/* Press Kit page */
+.downloadPressKitButton {
+  display:inline-block;
+  padding: 0;
+  height: 52px;
+  color: white;
+  font-weight: 300;
+  background: #4A90E2;
+  width: 220px;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 26px;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, .2);
+  cursor: pointer;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+.downloadPressKitButton:hover {
+  box-shadow: 0 8px 8px rgba(74, 144, 226, .2);
+  opacity: 0.9;
+}
+.seperator {
+  margin: 30px 0 50px;
+  height: 1px;
+  width: 100%;
+  background: #F5F5F5;
+  display: block;
+}
+.pressKitDetails {
+  font-size: 18px;
+  color: #9F9F9F;
+  text-align: center;
+  display: block;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 80px;
+}
+.pressKitDetails a {
+  color: #FF4771;
+  text-decoration: none;
 }
