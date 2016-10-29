@@ -345,6 +345,7 @@ section .infoBlock p {
   z-index: 2;
   padding-right: 2px;
   position: relative;
+  background: white;
 }
 #send .inputBlock .userInput:after {
   width: 2px;
