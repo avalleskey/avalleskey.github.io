@@ -63,7 +63,7 @@ header .alignLeft li:first-of-type span {
   height: 24px;
   display: inline-block;
   margin-right: 10px;
-  background: url("../resources/tinyAppIcon.svg");
+  background: url("../resources/tinyAppIcon@2x.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
