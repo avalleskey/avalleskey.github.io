@@ -43,3 +43,17 @@ $(".promoVideoContainer").click( function() {
     $("#promoVideo")[0].pause();
   }
 });
+
+$(".submitEmailButton").click( function() {
+  console.log("val: " + $("#emailInput").val());
+  $(".emailUpdatesBlock").addClass("hasAddedEmail");
+  $.ajax({
+  method: "POST",
+  url: "https://6znve23df4.execute-api.eu-west-1.amazonaws.com/prod/",
+  data: JSON.stringify({ "email": $("#emailInput").val() })
+  }).done(function(msg) {
+    console.log("200: " + msg);
+  }).fail( function(msg) {
+    console.log("400: " + msg);
+  });
+});
