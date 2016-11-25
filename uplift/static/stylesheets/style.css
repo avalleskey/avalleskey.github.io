@@ -727,6 +727,9 @@ section .infoBlock p {
   color: #C3C3C3;
   margin: 0 0 14px;
 }
+.errorAddingEmail #updatesBlockHelper {
+    color: #ff4771;
+}
 #successText {
     position: absolute;
     left: 0;
