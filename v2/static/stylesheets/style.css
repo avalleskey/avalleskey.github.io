@@ -1,0 +1,284 @@
+body {
+  background: #FCFCFC;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+.content .outlines {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content .outlines div {
+  position: absolute;
+  background: #EEE;
+  transition: 0.8s all ease-in;
+  -webkit-transition: 0.8s all ease-in;
+  -moz-transition: 0.8s all ease-in;
+  -o-transition: 0.8s all ease-in;
+}
+.content .outlines div:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  height:2px;
+  width: 0;
+  transition-delay: 0;
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  -o-transition-delay: 0;
+}
+.content .outlines div:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  width:2px;
+  height: 0;
+  transition-delay: 0.6s;
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+}
+.content .outlines div:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  height:2px;
+  width: 0;
+  transition-delay: 1.2s;
+  -webkit-transition-delay: 1.2s;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+}
+.content .outlines div:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 2px;
+  transition-delay: 1.8s;
+  -webkit-transition-delay: 1.8s;
+  -moz-transition-delay: 1.8s;
+  -o-transition-delay: 1.8s;
+}
+body.ready .content .outlines div:nth-of-type(1) {
+  width: 100%;
+}
+body.ready .content .outlines div:nth-of-type(2) {
+  height: 100%;
+}
+body.ready .content .outlines div:nth-of-type(3) {
+  width: 100%;
+}
+body.ready .content .outlines div:nth-of-type(4) {
+  height: 100%;
+}
+#myName {
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.3s all ease-in;
+    -webkit-transition: 0.3s all ease-in;
+    -moz-transition: 0.3s all ease-in;
+    -o-transition: 0.3s all ease-in;
+}
+body.loaded #myName {
+  opacity: 1;
+}
+.profilePicture {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.15);
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  border-radius: 50%;
+  background: #FFF url("../images/profilePicture@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.8s all cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: 0.8s all cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: 0.8s all cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: 0.8s all cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+body.ready .profilePicture {
+  box-shadow: 0 10px 18px rgba(0,0,0,.2);
+}
+body.ready .profilePicture, body.loaded .profilePicture {
+  bottom: 60px;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+body.loaded .profilePicture {
+  box-shadow: 0 6px 12px rgba(0,0,0,.15);
+}
+
+.leftSide {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+}
+.rightSide {
+  width: calc(50% - 15px);
+  height: calc(100% - 30px);
+  top: 15px;
+  left: 50%;
+  position: fixed;
+  overflow: hidden;
+  background: #F9F9F9;
+  z-index: 100;
+  transition: 0.3s all ease-in;
+  -webkit-transition: 0.3s all ease-in;
+  -moz-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+}
+/*.rightSideFill {
+  background: #7EDFE6;
+  width: 100px;
+  position: absolute;
+  left: -50px;
+  top: calc(100% - 170px);
+  height: 100px;
+  transition: 0.5s all ease;
+  -webkit-transition: 10s all ease;
+  -moz-transition: 10s all ease;
+  -o-transition: 10s all ease;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 50%;
+}
+body.loaded .rightSideFill {
+  opacity: 1;
+  width: calc(100vw + 200px);
+  height: calc(100vw + 200px);
+  left: -100%;
+  top: calc(100% - 200px - ((100vw + 200px) / 2));
+}*/
+body.loaded .rightSide {
+  background: #7EDFE6;
+  box-shadow: 0 6px 24px rgba(0, 194, 255, .2);
+}
+
+
+footer {
+  bottom: 58px;
+  height: 20px;
+  left: 60px;
+  position: fixed;
+  min-width: 400px;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20px;
+}
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-right: 6px;
+  height: 20px;
+  line-height: 20px;
+  transition: 0.4s all ease-in;
+  -webkit-transition: 0.4s all ease-in;
+  -moz-transition: 0.4s all ease-in;
+  -o-transition: 0.4s all ease-in;
+  opacity: 0;
+  transform: translateY(6px);
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(86pxpx);
+  -o-transform: translateY(6px);
+}
+footer ul li:last-of-type {
+  margin-right: 0;
+}
+footer ul li.liDot {
+  opacity: 0;
+  transition-delay: 1.2s;
+  -webkit-transition-delay: 1.2s;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+}
+footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+body.loaded footer ul li {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+footer ul li a:hover {
+  color: #111;
+}
+body.loaded footer ul li.liDot {
+  opacity: 0.1;
+}
+footer ul li a:nth-of-type(1) {
+
+}
+footer ul li:nth-of-type(3) {
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+}
+footer ul li:nth-of-type(5) {
+  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+}
+footer ul li a:before {
+    content: '';
+    width: 0;
+    height: 8px;
+    top: 12px;
+    background: rgba(248, 231, 28, .2);
+    position: absolute;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    left: -2px;
+    border-radius: 3px;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    z-index: -1;
+}
+footer ul li a:hover:before {
+    width: calc(100% + 4px);
+}
