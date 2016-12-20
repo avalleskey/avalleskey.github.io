@@ -11,6 +11,16 @@ $(".speakingSlideshow .slideshowButtons .slideshowRightButton").click( function(
   updateSlideshow();
 });
 
+var resizeTimer;
+
+$(window).on('resize', function(e) {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    updateSlideshow();
+  }, 50);
+
+});
+
 function updateSlideshow() {
   if (currentSlide == 0) {
     // first slide
@@ -26,7 +36,19 @@ function updateSlideshow() {
   else {
     $(".speakingSlideshow .slideshowButtons .slideshowRightButton").removeClass("hiddenSlideshowButton");
   }
-  $(".speakingSlideshow .slideshowSlides").css("left", "calc(-1 * (((50vw - 15px - 120px) * " + currentSlide + ") + (2px * " + currentSlide + ")) + 60px)");
+
+  var width = document.body.clientWidth;
+
+  if (width > 1050) {
+    $(".speakingSlideshow .slideshowSlides").css("left", "calc(-1 * (((50vw - 15px - 120px) * " + currentSlide + ") + (2px * " + currentSlide + ")) + 60px)");
+  }
+  else if (width <= 1050 && width > 960) {
+    $(".speakingSlideshow .slideshowSlides").css("left", "calc(-1 * (((50vw - 15px - 80px) * " + currentSlide + ") + (2px * " + currentSlide + ")) + 40px)");
+  }
+  else {
+    // width <= 960
+    $(".speakingSlideshow .slideshowSlides").css("left", "calc(-1 * (((100vw - 40px - 80px) * " + currentSlide + ") + (2px * " + currentSlide + ")) + 40px)");
+  }
   $(".speakingSlideshow .slideshowSlides .currentSlideshowSlide").each( function() {
     $(this).removeClass("currentSlideshowSlide");
   });

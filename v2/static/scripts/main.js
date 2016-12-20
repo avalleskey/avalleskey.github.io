@@ -1,13 +1,22 @@
 $(document).ready( function() {
-  setTimeout( function() {
+  var width = document.body.clientWidth;
+
+  if (width <= 960) {
     $("body").addClass("ready");
+    $("body").addClass("loaded");
+    $(".rightSideNav ul li[name='mywork']").addClass("activeNavItem");
+  }
+  else {
     setTimeout( function() {
-      $("body").addClass("loaded");
+      $("body").addClass("ready");
       setTimeout( function() {
-        $(".rightSideNav ul li[name='mywork']").addClass("activeNavItem");
+        $("body").addClass("loaded");
+        setTimeout( function() {
+          $(".rightSideNav ul li[name='mywork']").addClass("activeNavItem");
+        }, 600);
       }, 600);
-    }, 600);
-  }, 500);
+    }, 500);
+  }
   $(".slideContainer").height($(".activeSlide").height());
 });
 $(".rightSideNav ul li").click( function() {
@@ -25,12 +34,16 @@ $(".rightSideNav ul li").click( function() {
   }
 });
 $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    // Do something
-    if (scroll <= 20 && $(".profilePicture").hasClass("hiddenProfilePicture")) {
-      $(".profilePicture").removeClass("hiddenProfilePicture")
-    }
-    else if (scroll > 20 && !$(".profilePicture").hasClass("hiddenProfilePicture")) {
-      $(".profilePicture").addClass("hiddenProfilePicture")
+    var width = document.body.clientWidth;
+
+    if (width > 960) {
+      var scroll = $(window).scrollTop();
+      // Do something
+      if (scroll <= 20 && $(".profilePicture").hasClass("hiddenProfilePicture")) {
+        $(".profilePicture").removeClass("hiddenProfilePicture");
+      }
+      else if (scroll > 20 && !$(".profilePicture").hasClass("hiddenProfilePicture")) {
+        $(".profilePicture").addClass("hiddenProfilePicture");
+      }
     }
 });

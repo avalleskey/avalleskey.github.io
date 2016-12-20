@@ -108,6 +108,7 @@
   -webkit-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
   -moz-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
   -o-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+  border: 0;
 }
 .speakingSlideshow .currentSlideshowSlide .slideshowSlideCaption {
   bottom: 0;
