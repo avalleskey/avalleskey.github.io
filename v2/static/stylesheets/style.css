@@ -82,7 +82,7 @@ body.loaded .circles div {
 .content {
   width: calc(100% - 50px);
   height: calc(100% - 50px);
-  position: absolute;
+  position: fixed;
   left: 25px;
   top: 25px;
 }
@@ -273,10 +273,11 @@ body.loaded .leftSide p span {
 }
 .rightSide {
   width: calc(50% - 15px);
-  height: calc(100% - 30px);
+  min-height: calc(100% - 30px);
   top: 15px;
   left: 50%;
-  position: fixed;
+  position: absolute;
+  margin-bottom: 15px;
   overflow: hidden;
   background: transparent;
   z-index: 100;
@@ -451,9 +452,8 @@ body.loaded .rightSideNav ul li.activeNavItem:before {
   top: 0;
 }
 .rightSideContent {
-  position: absolute;
-  height: calc(100% - 107px);
-  top: 107px;
+  position: relative;
+  margin-top: 107px;
   width:100%;
   box-sizing:border-box;
   -webkit-box-sizing:border-box;
