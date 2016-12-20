@@ -34,8 +34,8 @@
       height: auto;
     }
     .rightSide {
-        width: calc(100% - 40px);
-        left: 20px;
+        width: calc(100% - 20px);
+        left: 10px;
         top: auto;
         position: relative;
         min-height: auto;
@@ -48,7 +48,7 @@
         left: 0;
         width: 100%;
         height: auto;
-        padding: 120px 40px 40px;
+        padding: 120px 10px 40px;
     }
     #myName {
       text-align: center;
@@ -67,12 +67,13 @@
     }
     .leftSide p span {
       display: inline-block;
-      margin: 0 12px;
+      margin: 0 10px;
       color: #999;
       transform: translateY(10px);
       -webkit-transform: translateY(10px);
       -moz-transform: translateY(10px);
       -o-transform: translateY(10px);
+      font-size: 12px;
     }
     body.loaded .leftSide p span {
         opacity: 1;
@@ -82,10 +83,30 @@
         -o-transform: translateY(0);
     }
     .rightSideNav {
-      top: 40px;
+      top: 30px;
+      left: 30px;
+      width: calc(100% - 60px);
+      padding-bottom: 20px;
+    }
+    .rightSideNav ul:before {
+      bottom: -20px;
+    }
+    .rightSideNav ul li:before {
+      bottom: -20px;
     }
     .rightSideContent {
-      margin-top: 90px;
+      margin-top: 70px;
+      padding: 30px;
+    }
+    .rightSideContent h5 a {
+      font-size: 14px;
+      padding: 15px;
+    }
+    .rightSideContent ul li {
+      padding: 15px 45px 15px 15px;
+    }
+    .rightSideContent ul li.listItemWithLink {
+      background-position: calc(100% - 15px) center;
     }
     .profilePicture {
         width: 60px;
@@ -99,11 +120,11 @@
         position: absolute;
     }
     .speakingSlideshow .slideshowSlides {
-      width: calc(((100vw - 40px - 80px) * 7) + (2px * 6));
-      left: 40px;
+      width: calc(((100vw - 20px - 60px) * 7) + (2px * 6));
+      left: 30px;
     }
     .speakingSlideshow .slideshowSlide {
-      width: calc(100vw - 40px - 80px);
+      width: calc(100vw - 20px - 60px);
     }
     .speakingSlideshow .slideshowButtons .slideshowLeftButton {
       left: 13px;
