@@ -16,10 +16,10 @@
   width: calc(((50vw - 15px - 120px) * 7) + (2px * 6));
   position: absolute;
   z-index: 2;
-  transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
-  -webkit-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
-  -moz-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
-  -o-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+  transition: 0.35s left cubic-bezier(0.4, 0, 0.2, 1.0);
+  -webkit-transition: 0.35s left cubic-bezier(0.4, 0, 0.2, 1.0);
+  -moz-transition: 0.35s left cubic-bezier(0.4, 0, 0.2, 1.0);
+  -o-transition: 0.35s left cubic-bezier(0.4, 0, 0.2, 1.0);
   left: 60px;
 
   /* first slide
@@ -37,11 +37,12 @@
   opacity: 0.3;
   position: relative;
   margin-right: 2px;
-  transition: 0.3s all ease-in;
-  -webkit-transition: 0.3s all ease-in;
-  -moz-transition: 0.3s all ease-in;
-  -o-transition: 0.3s all ease-in;
+  transition: 0.3s box-shadow ease-in, 0.3s opacity ease-in;
+  -webkit-transition: 0.3s -webkit-box-shadow ease-in, 0.3s opacity ease-in;
+  -moz-transition: 0.3s -moz-box-shadow ease-in, 0.3s opacity ease-in;
+  -o-transition: 0.3s -o-box-shadow ease-in, 0.3s opacity ease-in;
   overflow: hidden;
+  background-position: center bottom;
 }
 .firstSlide {
   background-image: url('../images/sit_dg.png');

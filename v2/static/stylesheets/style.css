@@ -30,10 +30,10 @@ a {
   box-shadow: 0 0 0 0.1 RGBA(0, 0, 0, .05);
   border-radius: 50%;
   position: absolute;
-  transition: 0.4s all ease-in;
-  -webkit-transition: 0.4s all ease-in;
-  -moz-transition: 0.4s all ease-in;
-  -o-transition: 0.4s all ease-in;
+  transition: 0.4s box-shadow ease-in;
+  -webkit-transition: 0.4s -webkit-box-shadow ease-in;
+  -moz-transition: 0.4s -moz-box-shadow ease-in;
+  -o-transition: 0.4s -o-box-shadow ease-in;
 }
 .circles div:nth-of-type(1) {
   width: calc(.35 * 100vw);
