@@ -34,13 +34,14 @@
   height: 100%;
   background-color: rgba(0,0,0,.1);
   display: inline-block;
-  opacity: 0.5;
+  opacity: 0.3;
   position: relative;
   margin-right: 2px;
   transition: 0.3s all ease-in;
   -webkit-transition: 0.3s all ease-in;
   -moz-transition: 0.3s all ease-in;
   -o-transition: 0.3s all ease-in;
+  overflow: hidden;
 }
 .firstSlide {
   background-image: url('../images/sit_dg.png');
@@ -92,7 +93,7 @@
   font-size: 16px;
   padding: 16px 20px;
   width: 100%;
-  bottom: 0;
+  bottom: -52px;
   margin: 0;
   height: 52px;
   line-height: 20px;
@@ -103,6 +104,13 @@
   text-transform: uppercase;
   overflow: hidden;
   z-index: 3;
+  transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+  -webkit-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+  -moz-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+  -o-transition: 0.35s all cubic-bezier(0.4, 0, 0.2, 1.0);
+}
+.speakingSlideshow .currentSlideshowSlide .slideshowSlideCaption {
+  bottom: 0;
 }
 
 /* first slide caption */
@@ -349,6 +357,12 @@
   display: block;
   z-index: -1;
 }
+.slideshowSlideCaption:after {
+  transition: 0.3s all ease-in;
+  -webkit-transition: 0.3s all ease-in;
+  -moz-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+}
 
 .speakingSlideshow .slideshowSlide:last-of-type {
   margin-right: 0;
@@ -365,10 +379,10 @@
   width: 54px;
   height: 54px;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  transform: translateY(calc(-50% - 6px));
+  -webkit-transform: translateY(calc(-50% - 6px));
+  -moz-transform: translateY(calc(-50% - 6px));
+  -o-transform: translateY(calc(-50% - 6px));
   cursor: pointer;
   z-index: 10;
   background: white;
@@ -387,10 +401,10 @@
   box-shadow: 0 4px 8px rgba(0,0,0,.3);
 }
 .speakingSlideshow .slideshowButtons div:active {
-  transform: scale(0.96) translateY(-50%);
-  -webkit-transform: scale(0.96) translateY(-50%);
-  -moz-transform: scale(0.96) translateY(-50%);
-  -o-transform: scale(0.96) translateY(-50%);
+  transform: scale(0.96) translateY(calc(-50% - 6px));
+  -webkit-transform: scale(0.96) translateY(calc(-50% - 6px));
+  -moz-transform: scale(0.96) translateY(calc(-50% - 6px));
+  -o-transform: scale(0.96) translateY(calc(-50% - 6px));
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 .speakingSlideshow .slideshowButtons div.hiddenSlideshowButton {
