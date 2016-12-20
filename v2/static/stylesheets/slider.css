@@ -158,6 +158,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .secondSlide .slideshowSlideCaption:after {
   content: '';
@@ -189,6 +193,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .thirdSlide .slideshowSlideCaption:after {
   content: '';
@@ -220,6 +228,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .fourthSlide .slideshowSlideCaption:after {
   content: '';
@@ -251,6 +263,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .fifthSlide .slideshowSlideCaption:after {
   content: '';
@@ -282,6 +298,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .sixthSlide .slideshowSlideCaption:after {
   content: '';
@@ -313,6 +333,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .seventhSlide .slideshowSlideCaption:after {
   content: '';
