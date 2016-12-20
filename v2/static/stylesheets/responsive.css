@@ -111,6 +111,18 @@
     .speakingSlideshow .slideshowButtons .slideshowRightButton {
       right: 13px;
     }
+    footer {
+      position: relative;
+      display: block;
+      bottom: auto;
+      margin: 50px 0;
+      min-width: auto;
+      left: auto;
+      text-align: center;
+    }
+    footer ul li a {
+      font-size: 20px;
+    }
 }
 @media only screen and (max-width: 540px) {
   .rightSideNav ul li[name='work'] {
