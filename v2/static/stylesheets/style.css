@@ -555,7 +555,7 @@ body.loaded .rightSideContent {
   display: block;
   background-color: white;
   width: 100%;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px dashed rgba(0,0,0,.1);
   padding: 15px 50px 15px 20px;
   box-sizing:border-box;
   -webkit-box-sizing:border-box;
@@ -574,7 +574,7 @@ body.loaded .rightSideContent {
   border-bottom-width: 0;
 }
 .rightSideContent ul li:hover {
-  background-color: #FAFAFA;
+  background-color: #FCFCFC;
 }
 .rightSideContent ul li:hover a {
 
