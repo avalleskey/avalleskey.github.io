@@ -196,6 +196,8 @@ body.loaded #myName {
 }
 body.ready .profilePicture {
   box-shadow: 0 10px 18px rgba(0,0,0,.2);
+  width: 80px;
+  height: 80px;
 }
 body.ready .profilePicture, body.loaded .profilePicture {
   bottom: 60px;
@@ -542,6 +544,9 @@ body.loaded .rightSideContent {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
 }
+.rightSideContent ul li.listItemWithLink, .rightSideContent ul li.listItemWithLink span {
+  cursor: pointer;
+}
 .rightSideContent ul li {
   list-style-type: none;
   display: block;
@@ -557,7 +562,6 @@ body.loaded .rightSideContent {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.5px;
-  cursor: pointer;
   transition: 0.3s all ease-in;
   -webkit-transition: 0.3s all ease-in;
   -moz-transition: 0.3s all ease-in;
@@ -578,7 +582,6 @@ body.loaded .rightSideContent {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1.1px;
-  cursor: pointer;
 }
 .slideContainer {
   position: relative;
