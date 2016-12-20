@@ -294,6 +294,9 @@ body.loaded .rightSide {
   box-shadow: 0 10px 16px rgba(0, 0, 0, .1);
   background: #FFF;
 }
+body.loaded .rightSide:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, .15);
+}
 .rightSideNav {
   height: 20px;
   position: absolute;
@@ -365,15 +368,14 @@ body.loaded .rightSideNav ul li a:before {
     content: '';
     width: 0;
     height: 2px;
-    top: 22px;
-    background: rgba(48, 79, 254, 0.2);
+    top: 10px;
+    background: rgba(48, 79, 254, 0.6);
     position: absolute;
     transition: 0.2s all ease;
     -webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     left: 0;
-    z-index: -1;
 }
 body.loaded .rightSideNav ul li a:hover:before {
     width: 100%;
@@ -476,8 +478,13 @@ body.loaded .rightSideContent {
   -o-transform: translateY(0);
 }
 .rightSideContent h5 {
+  margin: 0;
+  padding: 0;
+}
+.rightSideContent h5 a {
   padding: 20px;
-  border: 1px dotted rgba(0,0,0,.1);
+  background: rgba(80, 227, 165, 1);
+  color: white;
   box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -488,6 +495,18 @@ body.loaded .rightSideContent {
   letter-spacing: 1.5px;
   margin: 0 0 40px;
   line-height: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  transition: 0.3s all ease-in;
+  -webkit-transition: 0.3s all ease-in;
+  -moz-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+}
+.rightSideContent h5 a:hover {
+  box-shadow: 0 6px 10px rgba(0,0,0,.15);
+}
+.rightSideContent h5 a {
+  color: white;
+  display: block;
 }
 .rightSideContent h2 {
     font-size: 14px;
@@ -505,17 +524,28 @@ body.loaded .rightSideContent {
   border: 1px solid rgba(0,0,0,.1);
   padding: 0;
   background: rgba(0,0,0,.02);
+
+  transition: 0.3s all ease-in;
+  -webkit-transition: 0.3s all ease-in;
+  -moz-transition: 0.3s all ease-in;
+  -o-transition: 0.3s all ease-in;
+}
+.rightSideContent ul:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
 }
 .rightSideContent ul:last-of-type {
   margin-bottom: 0;
 }
-.rightSideContent ul li {
-  list-style-type: none;
-  display: block;
-  background: white url('../images/external_link.svg');
+.rightSideContent ul li.listItemWithLink {
+  background-image: url('../images/external_link.svg');
   background-size: 16px;
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
+}
+.rightSideContent ul li {
+  list-style-type: none;
+  display: block;
+  background-color: white;
   width: 100%;
   border-bottom: 1px solid rgba(0,0,0,.1);
   padding: 15px 50px 15px 20px;
@@ -552,6 +582,7 @@ body.loaded .rightSideContent {
 }
 .slideContainer {
   position: relative;
+  overflow: visible;
 }
 .slideContainer .rightSideSlide {
   display: inline-block;
@@ -674,15 +705,14 @@ footer ul li a:before {
     content: '';
     width: 0;
     height: 2px;
-    top: 22px;
-    background: rgba(48, 79, 254, 0.2);
+    top: 10px;
+    background: rgba(48, 79, 254, 0.6);
     position: absolute;
     transition: 0.2s all ease;
     -webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     left: 0;
-    z-index: -1;
 }
 footer ul li a:hover:before {
     width: 100%;
