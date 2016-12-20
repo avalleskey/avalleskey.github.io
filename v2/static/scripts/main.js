@@ -8,6 +8,7 @@ $(document).ready( function() {
       }, 600);
     }, 600);
   }, 500);
+  $(".slideContainer").height($(".activeSlide").height());
 });
 $(".rightSideNav ul li").click( function() {
   var name = $(this).attr("name");
@@ -16,5 +17,10 @@ $(".rightSideNav ul li").click( function() {
       $(this).removeClass("activeNavItem");
     });
     $(this).addClass("activeNavItem");
+    $(".rightSideSlide").each( function() {
+      $(this).removeClass("activeSlide");
+    });
+    $("#" + name).addClass("activeSlide");
+    $(".slideContainer").animate({"height": Number(($("#" + name).height() * (10 / 9)).toFixed(0))}, 300);
   }
 });
