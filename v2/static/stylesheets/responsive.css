@@ -151,7 +151,7 @@
       text-align: center;
     }
     footer ul li a {
-      font-size: 16px
+      font-size: 14px;
     }
 }
 @media only screen and (max-width: 540px) {
