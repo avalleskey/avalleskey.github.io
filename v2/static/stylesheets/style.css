@@ -184,7 +184,7 @@ body.loaded #myName {
   -moz-transform: translate(-50%, 50%);
   -o-transform: translate(-50%, 50%);
   border-radius: 50%;
-  background: #FFF url("../images/profilePicture@2x.jpg");
+  background: RGBA(36, 59, 46, 1.00) url("../images/profilePicture@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -196,8 +196,11 @@ body.loaded #myName {
 }
 body.ready .profilePicture {
   box-shadow: 0 10px 18px rgba(0,0,0,.2);
-  width: 80px;
+}
+body.ready .hiddenProfilePicture {
   height: 80px;
+  width: 80px;
+  opacity: 0;
 }
 body.ready .profilePicture, body.loaded .profilePicture {
   bottom: 60px;

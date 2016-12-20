@@ -24,3 +24,13 @@ $(".rightSideNav ul li").click( function() {
     $(".slideContainer").animate({"height": Number(($("#" + name).height() * (10 / 9)).toFixed(0))}, 300);
   }
 });
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    if (scroll <= 20 && $(".profilePicture").hasClass("hiddenProfilePicture")) {
+      $(".profilePicture").removeClass("hiddenProfilePicture")
+    }
+    else if (scroll > 20 && !$(".profilePicture").hasClass("hiddenProfilePicture")) {
+      $(".profilePicture").addClass("hiddenProfilePicture")
+    }
+});
