@@ -318,7 +318,7 @@ body.loaded .rightSide {
   content: '';
   display:block;
   height: 1px;
-  background: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.07);
   bottom: -30px;
   position: absolute;
   width: 0;
@@ -365,6 +365,23 @@ body.loaded .rightSideNav ul li {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -o-transform: translateY(0);
+}
+body.loaded .rightSideNav ul li a:before {
+    content: '';
+    width: 0;
+    height: 2px;
+    top: 22px;
+    background: rgba(48, 79, 254, 0.2);
+    position: absolute;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    left: 0;
+    z-index: -1;
+}
+body.loaded .rightSideNav ul li a:hover:before {
+    width: 100%;
 }
 .rightSideNav ul li:nth-of-type(1) {
   transition-delay: 0.2s;
@@ -475,11 +492,14 @@ body.loaded .rightSideContent {
     color: #555;
 }
 .rightSideContent ul {
-  margin: 0;
+  margin: 0 0 30px;
   padding: 0;
   border: 1px solid rgba(0,0,0,.1);
   padding: 0;
   background: rgba(0,0,0,.02);
+}
+.rightSideContent ul:last-of-type {
+  margin-bottom: 0;
 }
 .rightSideContent ul li {
   list-style-type: none;
@@ -509,7 +529,7 @@ body.loaded .rightSideContent {
   border-bottom-width: 0;
 }
 .rightSideContent ul li:hover {
-  background-color: #F9FAFE;
+  background-color: #FAFAFA;
 }
 .rightSideContent ul li span {
   display: block;
@@ -517,6 +537,7 @@ body.loaded .rightSideContent {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1.1px;
+  cursor: pointer;
 }
 
 
@@ -578,9 +599,6 @@ body.loaded footer ul li {
   -moz-transform: translateY(0);
   -o-transform: translateY(0);
 }
-footer ul li a:hover {
-  color: #111;
-}
 body.loaded footer ul li.liDot {
   opacity: 0.1;
 }
@@ -608,22 +626,17 @@ footer ul li:nth-of-type(7) {
 footer ul li a:before {
     content: '';
     width: 0;
-    height: 8px;
-    top: 12px;
-    background: rgba(248, 231, 28, .2);
+    height: 2px;
+    top: 22px;
+    background: rgba(48, 79, 254, 0.2);
     position: absolute;
     transition: 0.2s all ease;
     -webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
-    left: -2px;
-    border-radius: 3px;
-    transform: skew(-20deg);
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    -o-transform: skew(-20deg);
+    left: 0;
     z-index: -1;
 }
 footer ul li a:hover:before {
-    width: calc(100% + 4px);
+    width: 100%;
 }
