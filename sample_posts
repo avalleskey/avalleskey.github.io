@@ -1,0 +1,111 @@
+{
+  "data": [{
+    "id": 2,
+    "type": "post",
+    "attributes": {
+      "details": {
+        "message": "Supreme rocks y0!",
+        "has_media": false,
+        "creator": {
+          "id": "hp",
+          "type": "user",
+          "attributes": {
+            "details": {
+              "display_name": "Apple Boy"
+            }
+          }
+        }
+      },
+      "status": {
+        "room": {
+          "id": "-xJEK2oY0QnBM",
+          "type": "room",
+          "attributes": {
+            "details": {
+              "identifier": "Supreme",
+              "title": "Supreme Peeps",
+              "description": null
+            },
+            "status": {
+              "is_active": false,
+              "is_blocked": false,
+              "discoverability": {
+                "is_private": false,
+                "searchable": true
+              }
+            },
+            "summaries": {
+              "members": [],
+              "counts": {
+                "members": 0,
+                "live": 0
+              }
+            }
+          }
+        },
+        "created_at": "2018-10-01T22:28:19+0000"
+      },
+      "summaries": {
+        "comments": [],
+        "counts": {
+          "comments": 0
+        }
+      }
+    }
+  },
+{
+    "id": 2,
+    "type": "post",
+    "attributes": {
+      "details": {
+        "message": "Supreme rocks y0!",
+        "has_media": false,
+        "creator": {
+          "id": "hp",
+          "type": "user",
+          "attributes": {
+            "details": {
+              "display_name": "Apple Boy"
+            }
+          }
+        }
+      },
+      "status": {
+        "room": {
+          "id": "-xJEK2oY0QnBM",
+          "type": "room",
+          "attributes": {
+            "details": {
+              "identifier": "Supreme",
+              "title": "Supreme Peeps",
+              "description": null
+            },
+            "status": {
+              "is_active": false,
+              "is_blocked": false,
+              "discoverability": {
+                "is_private": false,
+                "searchable": true
+              }
+            },
+            "summaries": {
+              "members": [],
+              "counts": {
+                "members": 0,
+                "live": 0
+              }
+            }
+          }
+        },
+        "created_at": "2018-10-01T22:28:19+0000"
+      },
+      "summaries": {
+        "comments": [],
+        "counts": {
+          "comments": 0
+        }
+      }
+    }
+  }
+]
+}
