@@ -4,14 +4,18 @@
     "type": "post",
     "attributes": {
       "details": {
-        "message": "Supreme rocks y0!",
+        "message": "Really just putting this out there to make sure Austin isn't just messing around on his phone.",
         "has_media": false,
         "creator": {
-          "id": "hp",
+          "id": "hugo",
           "type": "user",
           "attributes": {
             "details": {
-              "display_name": "Apple Boy"
+              "display_name": "Hugo Pakula",
+              "color": "0076FF",
+              "media": {
+                "profile_picture": "https://pbs.twimg.com/profile_images/816427411646644224/UhSGY355_400x400.jpg"
+              }
             }
           }
         }
@@ -24,7 +28,8 @@
             "details": {
               "identifier": "Supreme",
               "title": "Supreme Peeps",
-              "description": null
+              "description": null,
+              "color": "0076FF"
             },
             "status": {
               "is_active": false,
@@ -58,14 +63,18 @@
     "type": "post",
     "attributes": {
       "details": {
-        "message": "Supreme rocks y0!",
+        "message": "Hi Hugo i'm not messing around. it's just market research ;)",
         "has_media": false,
         "creator": {
-          "id": "hp",
+          "id": "austin",
           "type": "user",
           "attributes": {
             "details": {
-              "display_name": "Apple Boy"
+              "display_name": "Austin Valleskey",
+              "color": "660000",
+              "media": {
+                "profile_picture": "https://pbs.twimg.com/profile_images/1041074358586941440/9Jqy3E7i_400x400.jpg"
+              }
             }
           }
         }
@@ -78,7 +87,8 @@
             "details": {
               "identifier": "Supreme",
               "title": "Supreme Peeps",
-              "description": null
+              "description": null,
+              "color": "0076FF"
             },
             "status": {
               "is_active": false,
